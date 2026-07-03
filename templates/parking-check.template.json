@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0",
+  "templateName": "Parking Check Demo",
+  "presetNickname": "Parking Check Demo",
+  "description": "Demo PixBridge preset for checking a vehicle-style JSON response.",
+  "_notes": {
+    "schemaVersion": "Template format version for this example file.",
+    "server": "Demo API settings to enter when creating a PixBridge server address.",
+    "responsePreset": "PixBridge app import data for response setting presets.",
+    "responseMappings": "Human-readable mapping summary matching the sample response JSON."
+  },
+  "server": {
+    "name": "Local Parking Demo API",
+    "baseUrl": "http://YOUR_LOCAL_IP:8000/check-parking",
+    "method": "POST",
+    "encodingType": "multipart",
+    "imageFieldName": "image",
+    "auth": {
+      "type": "bearer",
+      "tokenPlaceholder": "demo-token"
+    }
+  },
+  "responsePreset": [
+    {
+      "responseKeyNickname": "Plate",
+      "responseKeyTitle": "vehicle.plate",
+      "runtimeType": "string"
+    },
+    {
+      "responseKeyNickname": "Registered",
+      "responseKeyTitle": "vehicle.registered",
+      "runtimeType": "boolean"
+    },
+    {
+      "responseKeyNickname": "Vehicle Type",
+      "responseKeyTitle": "vehicle.type",
+      "runtimeType": "string"
+    },
+    {
+      "responseKeyNickname": "Confidence",
+      "responseKeyTitle": "confidence",
+      "runtimeType": "double"
+    },
+    {
+      "responseKeyNickname": "Message",
+      "responseKeyTitle": "message",
+      "runtimeType": "string"
+    }
+  ],
+  "responseMappings": [
+    {
+      "key": "vehicle.plate",
+      "label": "Plate",
+      "type": "string",
+      "order": 1
+    },
+    {
+      "key": "vehicle.registered",
+      "label": "Registered",
+      "type": "boolean",
+      "order": 2
+    },
+    {
+      "key": "vehicle.type",
+      "label": "Vehicle Type",
+      "type": "string",
+      "order": 3
+    },
+    {
+      "key": "confidence",
+      "label": "Confidence",
+      "type": "double",
+      "order": 4
+    },
+    {
+      "key": "message",
+      "label": "Message",
+      "type": "string",
+      "order": 5
+    }
+  ]
+}

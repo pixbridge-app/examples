@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "templateName": "Image Classification Demo",
+  "presetNickname": "Image Classification Demo",
+  "description": "Demo PixBridge preset for mapping image classification response values.",
+  "_notes": {
+    "schemaVersion": "Template format version for this example file.",
+    "server": "Demo API settings to enter when creating a PixBridge server address.",
+    "responsePreset": "PixBridge app import data for response setting presets.",
+    "responseMappings": "Human-readable mapping summary matching the sample response JSON."
+  },
+  "server": {
+    "name": "Local Classification Demo API",
+    "baseUrl": "http://YOUR_LOCAL_IP:8000/classify-image",
+    "method": "POST",
+    "encodingType": "multipart",
+    "imageFieldName": "image",
+    "auth": {
+      "type": "bearer",
+      "tokenPlaceholder": "demo-token"
+    }
+  },
+  "responsePreset": [
+    {
+      "responseKeyNickname": "Label",
+      "responseKeyTitle": "label",
+      "runtimeType": "string"
+    },
+    {
+      "responseKeyNickname": "Category",
+      "responseKeyTitle": "category",
+      "runtimeType": "string"
+    },
+    {
+      "responseKeyNickname": "Confidence",
+      "responseKeyTitle": "confidence",
+      "runtimeType": "double"
+    },
+    {
+      "responseKeyNickname": "Image Size Bytes",
+      "responseKeyTitle": "image_size_bytes",
+      "runtimeType": "int"
+    }
+  ],
+  "responseMappings": [
+    {
+      "key": "label",
+      "label": "Label",
+      "type": "string",
+      "order": 1
+    },
+    {
+      "key": "category",
+      "label": "Category",
+      "type": "string",
+      "order": 2
+    },
+    {
+      "key": "confidence",
+      "label": "Confidence",
+      "type": "double",
+      "order": 3
+    },
+    {
+      "key": "image_size_bytes",
+      "label": "Image Size Bytes",
+      "type": "int",
+      "order": 4
+    }
+  ]
+}

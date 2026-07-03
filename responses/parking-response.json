@@ -1,0 +1,9 @@
+{
+  "vehicle": {
+    "plate": "DEMO-1234",
+    "registered": true,
+    "type": "demo-car"
+  },
+  "confidence": 0.98,
+  "message": "Demo vehicle is registered."
+}

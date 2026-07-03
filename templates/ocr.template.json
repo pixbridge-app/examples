@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "templateName": "OCR Demo",
+  "presetNickname": "OCR Demo",
+  "description": "Demo PixBridge preset for mapping OCR-style response values.",
+  "_notes": {
+    "schemaVersion": "Template format version for this example file.",
+    "server": "Demo API settings to enter when creating a PixBridge server address.",
+    "responsePreset": "PixBridge app import data for response setting presets.",
+    "responseMappings": "Human-readable mapping summary matching the sample response JSON."
+  },
+  "server": {
+    "name": "Local OCR Demo API",
+    "baseUrl": "http://YOUR_LOCAL_IP:8000/ocr-demo",
+    "method": "POST",
+    "encodingType": "multipart",
+    "imageFieldName": "image",
+    "auth": {
+      "type": "bearer",
+      "tokenPlaceholder": "demo-token"
+    }
+  },
+  "responsePreset": [
+    {
+      "responseKeyNickname": "Text",
+      "responseKeyTitle": "text",
+      "runtimeType": "string"
+    },
+    {
+      "responseKeyNickname": "Confidence",
+      "responseKeyTitle": "confidence",
+      "runtimeType": "double"
+    },
+    {
+      "responseKeyNickname": "Language",
+      "responseKeyTitle": "language",
+      "runtimeType": "string"
+    },
+    {
+      "responseKeyNickname": "Blocks",
+      "responseKeyTitle": "blocks",
+      "runtimeType": "int"
+    }
+  ],
+  "responseMappings": [
+    {
+      "key": "text",
+      "label": "Text",
+      "type": "string",
+      "order": 1
+    },
+    {
+      "key": "confidence",
+      "label": "Confidence",
+      "type": "double",
+      "order": 2
+    },
+    {
+      "key": "language",
+      "label": "Language",
+      "type": "string",
+      "order": 3
+    },
+    {
+      "key": "blocks",
+      "label": "Blocks",
+      "type": "int",
+      "order": 4
+    }
+  ]
+}
