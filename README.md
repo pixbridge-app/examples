@@ -43,13 +43,3 @@ Authorization: Bearer demo-token
 - `POST /classify-image`
 
 All POST endpoints return demo JSON responses only. Uploaded images are validated and read for size checks, but they are never stored.
-
-## Security Notes
-
-- Do not commit real API keys.
-- Do not commit real Bearer tokens.
-- Do not commit production server URLs.
-- Do not commit Firebase configuration.
-- Do not commit customer data.
-- Do not commit real vehicle license plates.
-- Use placeholder values only in public examples.
